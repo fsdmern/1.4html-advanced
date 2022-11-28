@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <p>
+      Purpose: To collect user input and most of the times the input is sent to
+      server for processing and storing
+    </p>
+    <p>
+      id:The for attribute of te label tag should be equal to id attribute of
+      the input
+    </p>
+    <p>
+      name: input field must have a name. if name attribute is ommitted the
+      value of the input will not be sent for processing
+    </p>
+    <p>action: defines the action to be performed when the form is submitted</p>
+    <p>
+      target: _blank, _self, _parent, _top => targt attribute specifies where to
+      display the response that is received after submitting the form
+    </p>
+    <p>
+      method: get,post,patch,delete => method specifies HTTP method to be ised
+      when form data is submitted
+    </p>
+    <p>
+      autocomplete: specifies whether a form should have autocomplete on or off
+    </p>
+    <p>novalidate: it specifies that form data should not be validated</p>
+    <div class="container">
+      <form action="">
+        <label for="fname">First Name:</label><br />
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          placeholder="Enter your first name..."
+        />
+        <br /><br />
+        <label for="lname">Last Name:</label><br />
+        <input
+          type="text"
+          name="lname"
+          id="lname"
+          placeholder="Enter your last name..."
+        /><br />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <h2>Types of Input Elements</h2>
+    <p>
+      <input type="text" name="" id="" />
+      <input type="radio" name="" id="" />
+      <input type="checkbox" name="Checkbox" id="" />
+      <input type="submit" value="Submit" />
+      <input type="button" value="Button" />
+    </p>
+
+    <h2>Other HTML Form Elemenets:</h2>
+    <input type="text" placeholder="input" />
+    <label for="">Label</label>
+    <select name="" id="">
+      Select
+    </select>
+    <textarea name="" id="" cols="30" rows="10">Text Area</textarea>
+    <button>Button</button>
+    <fieldset>Field Set</fieldset>
+    <legend>Legend</legend>
+    <datalist>Data list</datalist>
+    <output>Output</output>
+    <option value="">Option</option>
+    <optgroup>Opt Group</optgroup>
+
+    <label for="cars">Choose a car:</label><br />
+    <select name="cars" id="cars" size="4" multiple>
+      <option value="volvo">Volvo</option>
+      <option value="toyoto">Toyoto</option>
+      <option value="audi">Audi</option>
+    </select>
+    <br /><br />
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+    <h2>Field Set - to group elements in a form</h2>
+    <form action="">
+      <fieldset>
+        <legend>Contact Info:</legend>
+        <label for="fname"></label>
+        <input type="text" name= " id="fname" placeholder="Enter your firstname:
+        ">
+        <label for="lname"></label>
+        <input type="text" id="lname" placeholder="Enter your lastname: " />
+        <input type="submit" value="" />
+      </fieldset>
+    </form>
+
+    <h2>Data list - with predetermined input values</h2>
+    <form action="">
+      <input list="browsers" name="browser" />
+      <datalist id="browsers">
+        <option value="IE"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
+
+      <input type="submit" />
+    </form>
+
+    <h2>Input Types</h2>
+    <input type="button" value="">
+    <input type="checkbox" name="" id="">
+    <input type="color" name="" id="">
+    <input type="date" name="" id="">
+    <input type="datetime" name="" id="">
+    <input type="datetime-local" name="" id="">
+    <input type="email" name="" id="">
+    <input type="file" name="" id="">
+    <input type="hidden" name="">
+    <input type="image" src="" alt="">
+    <input type="month" name="" id="">
+    <input type="number" name="" id="">
+    <input type="password" name="" id="">
+    <input type="radio" name="" id="">
+    <input type="range" name="" id="">
+    <input type="reset" value="">
+    <input type="search" name="" id="">
+    <input type="submit" value="">
+    <input type="tel" name="" id="">
+    <input type="text" name="" id="">
+    <input type="time" name="" id="">
+    <input type="url" name="" id="">
+    <input type="week" name="" id="">
+  </body>
+</html>
