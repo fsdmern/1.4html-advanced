@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - Media Tags</title>
+  </head>
+  <body>
+    <h2>HTML - Media Tags</h2>
+    <p>MP3, WAV, Ogg are only supported by HTML standard</p>
+    <video width="400" autoplay>
+      <source src="Serval - 140768.mp4" type="video/mp4" />
+      <source src="Duck - 140497.mp4" type="video/mp4" />
+    </video>
+
+    <audio controls>
+      <source src="lifelike-126735.mp3" type="audio/mpeg" />
+      <source src="lifelike-126735.mp3" type="audio/ogg" />
+    </audio>
+
+    <iframe
+      width="400"
+      height="315"
+      src="https://www.youtube.com/embed/opQ-oJCRAY0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <h2>Autoplay and Mute</h2>
+    <p>src="https://www.youtube.com/embed/opQ-oJCRAY0?autoplay=1&mute=1"</p>
+    <iframe
+      width="400"
+      height="315"
+      src="https://www.youtube.com/embed/opQ-oJCRAY0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <h2>Loop Property: loop=0 - play once; loop=1 play forever</h2>
+
+    <h2>HTML - Geolocation</h2>
+    <p>Click the below button to get your coordinates</p>
+    <button onClick="getLocation()">Click me</button>
+    <p id="demo"></p>
+
+    <script>
+      var x = document.getElementById('demo');
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition());
+        } else {
+          x.innerHTML = 'Geolocation is not supported by this browser';
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          'Latitude: ' +
+          position.coords.latitude +
+          '<br>Longitude: ' +
+          position.coords.longitude;
+      }
+    </script>
+  </body>
+</html>

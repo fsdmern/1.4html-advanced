@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - Input Attributes</title>
+  </head>
+  <body>
+    <h1>Input element with default values</h1>
+    <form action="">
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname" /><br />
+      <br />
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname" />
+    </form>
+    <br />
+
+    <h1>Input element with readonly attribute</h1>
+    <form action="">
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname" readonly value="John" /><br />
+      <br />
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname" />
+    </form>
+
+    <h1>Input element with disabled attribute</h1>
+    <form action="">
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname" disabled value="John" /><br />
+      <br />
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname" />
+    </form>
+
+    <h1>Input element with size attribute</h1>
+    <p>Size increases/decreases the width of the input</p>
+    <form action="">
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname" size="30" /><br />
+      <br />
+      <label for="pin">Pin Code:</label>
+      <input type="text" name="pin" id="pin" size="10" /> <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h1>Input element with size attribute and maxlength</h1>
+    <p>
+      Max length will not allow user to type the value beyond specified length
+    </p>
+    <form action="">
+      <label for="fname">First Name:</label>
+      <input
+        type="text"
+        name="fname"
+        id="fname"
+        size="30"
+        maxlength="30"
+      /><br />
+      <br />
+      <label for="pin">Pin Code:</label>
+      <input type="text" name="pin" id="pin" size="6" maxlength="6" />
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h1>Input element with min and max attributes</h1>
+    <p>It will not allow user to enter values below min and above max</p>
+    <form action="">
+      <label for="datemax">Enter a data before 1980-01-01:</label>
+      <input type="date" name="datemax" id="datemax" max="1979-12-31" /><br />
+      <br />
+
+      <label for="datemin">Enter a data after 2000-01-01:</label>
+      <input type="date" name="datemin" id="datemin" min="2000-01-02" /><br />
+      <br />
+
+      <label for="quantity">Quantity (between 1 and 5): </label>
+      <input type="number" name="quantity" id="quantity" min="1" max="5" />
+    </form>
+
+    <h1>Input element with multiple attribute keyword</h1>
+    <p>multiple attribute is used to take file and emails as input</p>
+    <form action="">
+      <label for="files">Select Files:</label>
+      <input type="file" name="files" id="files" multiple />
+    </form>
+
+    <h1>Input element with pattern attribute keyword</h1>
+    <p>
+      Pattern is used with input types: text, date, search, url, email, telphone
+      number, email and password
+    </p>
+    <form action="">
+      <label for="country_code">Country Code:</label>
+      <input
+        type="text"
+        name="country_code"
+        id="country_code"
+        pattern="[A-Za-z]{3}"
+        title="Three Letter Country Code"
+      />
+      <input type="submit" value="Submit">
+    </form>
+
+    <h1>Input element with placeholder attribute keyword</h1>
+    <p>placeholder specifies a short hint that describes the expected value</p>
+    <form action="">
+      <label for="phone">Enter a phone number:</label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="123-45-678"
+        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+      />
+
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h1>Input element with required attribute keyword</h1>
+    <form action="">
+      <label for="username">User Name:</label>
+      <input type="text" name="username" id="username" required />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h1>Input element with autofocus attribute keyword</h1>
+    <form action="">
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname" autofocus /><br /><br />
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname" /> <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h1>Input element with height and width attribute keyword</h1>
+    <form action="">
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname" /><br /><br />
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname" /> <br /><br />
+      <input
+        type="image"
+        src="dell-4Ea0P4IsZ_4-unsplash.jpg"
+        alt="submit"
+        width="48"
+        height="48"
+      />
+    </form>
+
+    <h1>Input element with auto completion attribute keyword</h1>
+    <form action="" autocomplete="on">
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname" /><br /><br />
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname" /> <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email" /> <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+
+  </body>
+</html>
